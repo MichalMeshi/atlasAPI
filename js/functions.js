@@ -144,17 +144,17 @@ const addEventListenerIfNotAdded = (element, event, listener) => {
 const run = async () => {
     const navLinks = document.querySelectorAll('.navClick');
     navLinks.forEach(link => {
-        addEventListenerIfNotAdded(link, 'click', async () => await handleListener(link.id));
+        addEventListenerIfNotAdded(link, 'click', async () =>  handleListener(link.id));
     });
 
     const searchBtn = document.getElementById('searchBtn');
     const searchCountry = document.getElementById('searchCountry');
-    await addEventListenerIfNotAdded(searchBtn, 'click', async () => await handleListener(searchCountry.value));
+    await addEventListenerIfNotAdded(searchBtn, 'click', async () =>  handleListener(searchCountry.value));
 
     const items = document.querySelectorAll('.item');
     items.forEach(item => {
         const val = item.querySelector('img').getAttribute('alt');
-        addEventListenerIfNotAdded(item, 'click', async () => await handleListener(val));
+        addEventListenerIfNotAdded(item, 'click', async () =>  handleListener(val));
     });
 
 };
